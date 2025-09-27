@@ -22,7 +22,7 @@ const Cart = () => {
             [name]: value
         }));
 
-        // Clear error when user starts typing
+
         if (formErrors[name]) {
             setFormErrors(prev => ({
                 ...prev,
@@ -148,7 +148,7 @@ const Cart = () => {
             )}
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                {/* Cart Items */}
+             
                 <div className="lg:col-span-2">
                     <div className="bg-white rounded-lg shadow-md overflow-hidden">
                         <div className="px-6 py-4 border-b border-gray-200">
@@ -196,9 +196,9 @@ const Cart = () => {
                     </div>
                 </div>
 
-                {/* Order Summary & Form */}
+          
                 <div className="space-y-6">
-                    {/* Order Summary */}
+               
                     <div className="bg-white rounded-lg shadow-md p-6">
                         <h2 className="text-lg font-semibold text-gray-900 mb-4">Order Summary</h2>
                         <div className="space-y-2">
@@ -221,7 +221,7 @@ const Cart = () => {
                         </div>
                     </div>
 
-                    {/* Order Form */}
+         
                     <form onSubmit={handlePlaceOrder} className="bg-white rounded-lg shadow-md p-6">
                         <h2 className="text-lg font-semibold text-gray-900 mb-4">Shipping Information</h2>
 

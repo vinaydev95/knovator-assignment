@@ -2,7 +2,7 @@ import React, { createContext, useContext, useReducer } from 'react';
 
 const CartContext = createContext();
 
-// Cart reducer for state management
+
 const cartReducer = (state, action) => {
     switch (action.type) {
         case 'ADD_TO_CART':
@@ -61,14 +61,14 @@ const cartReducer = (state, action) => {
     }
 };
 
-// Initial state
+
 const initialState = {
     items: [],
     loading: false,
     error: null
 };
 
-// Cart provider component
+
 export const CartProvider = ({ children }) => {
     const [state, dispatch] = useReducer(cartReducer, initialState);
 
@@ -123,7 +123,7 @@ export const CartProvider = ({ children }) => {
     );
 };
 
-// Custom hook to use cart context
+
 export const useCart = () => {
     const context = useContext(CartContext);
     if (!context) {
